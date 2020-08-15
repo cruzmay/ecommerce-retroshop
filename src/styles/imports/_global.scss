@@ -1,0 +1,45 @@
+$primary-color: #3E3A3A;
+$secundary-color: #909090;
+$light-color: #EDEDED;
+$acents: #CC2AA8;
+$white:#ffffff;
+$gradient: linear-gradient(114.27deg, #E9B3B3 17.36%, #CC2AA8 100.85%);
+$fuente: 'Roboto', sans-serif;
+$mediano: 950px;
+$movil: 320px;
+
+@mixin background($image) {
+    background: url($url + $image) ;
+   }
+   
+   @mixin fontpage($size, $weight) {
+       font-family: $fuente;
+       font-size: $size;
+       font-weight: $weight;
+   }
+   @mixin displayFlex ($direction, $justify, $align) {
+       display: flex;
+       flex-direction: $direction;
+       justify-content: $justify;
+       align-items: $align;
+   }
+   body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    @include fontpage(14px,bold);
+   }
+
+   .container {
+       display: grid;
+       grid-template: 60px 1fr 455px / 1fr ;
+       grid-template-areas: "header header" 
+                        "content__page content__page" 
+                        "footer footer";
+       height: 100%;
+       width: 100%;
+   }
+   .separador {
+       width: 100%;
+       border-top: 2px solid $primary-color;
+   }
