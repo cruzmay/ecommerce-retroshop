@@ -1,4 +1,5 @@
 import Carrusel from '../components/Carrusel';
+import getData from '../utils/getData'
 
 const Home = () => {
     const view = `
@@ -8,7 +9,8 @@ const Home = () => {
         <div class="content__page__welcome"> 
             <h2>WELCOME TO THE RETRO SHOP VISIT OUR PRODUCTS SECTIONS</h2>
         </div>
-        ${Carrusel()}
+        
+        <div id="carrousel">${Carrusel()}</div>
         `;
         return view
 }

@@ -1,10 +1,10 @@
-const productCard = () => {
+const productCard = (image, name, id) => {
     const view = `
         <div class="product-card__item" onclick="openModal()">
-            <div class="product-card__item__image"><img src="https://i.imgur.com/AvnliBY.png" alt="product"/></div>
+            <div class="product-card__item__image"><img src="${image || 'https://i.imgur.com/AvnliBY.png'}" alt="product"/></div>
             <div class="product-card__item__info">
-              <h3>Tenis</h3>
-              <p>$50.00</p>
+              <h3>${name || 'Nintendo mini'}</h3>
+              <p>$${id || '100'}</p>
               <div class="product-card__item__info__footer">
                 <div class="heart"><img src="https://i.imgur.com/1HZ0lkK.png" alt="heart"/></div>
                 <div class="stars">
@@ -20,6 +20,7 @@ const productCard = () => {
             </div>
           </div>
     `;
+    
 return view;
 }
 export default productCard;

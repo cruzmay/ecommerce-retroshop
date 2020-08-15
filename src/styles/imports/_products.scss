@@ -58,7 +58,7 @@
     }
     &__grid {
         padding-top: 20px;
-        padding-left: 20px;
+        // padding-left: 20px;
         padding-bottom: 20px;
         @include displayFlex (row, flex-start, center);
         flex-wrap: wrap;
